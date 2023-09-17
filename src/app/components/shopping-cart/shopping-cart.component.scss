@@ -1,0 +1,101 @@
+.container {
+    display: flex;
+    justify-content: center;
+
+    .cart-container {
+        background-color: #F3F3F3;
+        border-radius: 25px;
+        padding: 20px;
+        width: 451px;
+
+        .head {
+            display: flex;
+            justify-content: space-between;
+
+            .cart-title-label {
+                display: inherit;
+
+                p {
+                    margin-left: 5px;
+                }
+            }
+
+            button {
+                background-color: transparent;
+                border: 0;
+                color: gray;
+                cursor: pointer;
+            }
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+            margin-bottom: 15px;
+
+            .img-item {
+                width: 60px;
+                height: 60px;
+                background: #E1E1E1;
+                border-radius: 15px;
+            }
+
+            .body-item {
+                width: 160px;
+                padding-left: 15px;
+
+                #name-label {
+                    font-size: 15px;
+                    margin: 0;
+                }
+
+                #sub-info-label {
+                    font-size: 12px;
+                    margin-top: 3px;
+                    margin-bottom: 0;
+                }
+            }
+
+            #btn-trash {
+                border: 0;
+                background-color: transparent;
+                cursor: pointer;
+            }
+
+            .quantity{
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                button {
+                    border-radius: 50%;
+                    width: 25px;
+                    height: 25px;
+                    padding: 0;
+                    cursor: pointer;
+                    background-color: #E7EFF1;
+                    border: 0;
+                }
+
+                p {
+                    margin: 5px;
+                }
+            }
+
+            #item-price {
+                padding-right: 10px;
+            }
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+
+            .price {
+                p {
+                    text-align: end;
+                }
+            }
+        }
+    }
+}

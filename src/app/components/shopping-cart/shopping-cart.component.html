@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="cart-container">
+        <div class="head">
+            <div class="cart-title-label">
+                <img src="../../../assets/svg/shopping-cart.svg" alt="">
+                <p>Order summary</p>
+            </div>
+            <button (click)="removeAll()">Remove all</button>
+        </div>
+        <div class="item" *ngFor="let product of products">
+            <div class="img-item">
+                <!--<img src="../../../assets/images/bike.jpg" alt="">-->
+            </div>
+            <div class="body-item">
+                <p id="name-label"><strong>{{ product.item_name }}</strong></p>
+                <p id="sub-info-label">{{ product.short_description }}</p>
+            </div>
+            <div class="quantity">
+                <button id="minus" (click)="reduceQuantity(product)">-</button>
+                <p>{{ product.quantity }}</p>
+                <button id="add" (click)="addQuantity(product)">+</button>
+            </div>
+            <p id="item-price">{{ product.price_without_tax | currency:'USD' }}</p>
+            <button id="btn-trash" (click)="deleteProduct(product)"><img style="width: 15px;" src="../../../assets/svg/trash-2.svg" alt=""></button>
+        </div>
+        <hr>
+        <div class="footer">
+            <div>
+                <p>Subtotal</p>
+                <p>Shipping fees</p>
+                <p>Taxes</p>
+                <p><strong>Total (including tax)</strong></p>
+            </div>
+            <div class="price">
+                <p>{{ subtotal | currency:'USD' }}</p>
+                <p>{{ shippingFee | currency:'USD' }}</p>
+                <p>{{ taxes | currency:'USD' }}</p>
+                <p><strong>{{ total | currency:'USD' }}</strong></p>
+            </div>
+        </div>
+    </div>
+</div>
